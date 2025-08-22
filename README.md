@@ -1,27 +1,27 @@
-# Slipstream (@slipstream)
+# Slipstream (slipstream-ds)
 
-Slipstream é um Design System em React + TypeScript, inspirado no shadcn/ui e estruturado com Atomic Design. Fornece componentes acessíveis, tipados e com estilos via Tailwind CSS.
+Slipstream is a React + TypeScript Design System, inspired by shadcn/ui and structured with Atomic Design. It provides accessible, typed components with Tailwind CSS styling.
 
-## Filosofia
-- Reutilizável e tipado: API clara e segura com TypeScript.
-- Simples de estilizar: utilitários do Tailwind + tokens.
-- Acessibilidade primeiro: foco visível, estados, semântica correta.
-- Atomic Design: átomos → moléculas → organismos → templates.
+## Philosophy
+- Reusable and typed: Clear and safe API with TypeScript.
+- Easy to style: Tailwind utilities + tokens.
+- Accessibility first: Focus visible, states, correct semantics.
+- Atomic Design: atoms → molecules → organisms → templates.
 
-## Instalação
+## Installation
 ```bash
-npm install @slipstream
+npm install slipstream-ds
 ```
 
 Peer deps:
 - react >= 18
 - react-dom >= 18
 
-## Uso rápido
-Importe os estilos do pacote e use os componentes.
+## Quick usage
+Import the package styles and use the components.
 ```tsx
-import '@slipstream/styles.css'
-import { Button } from '@slipstream'
+import 'slipstream-ds/styles.css'
+import { Button } from 'slipstream-ds'
 
 export default function App() {
   return <Button>Primary</Button>
@@ -29,30 +29,30 @@ export default function App() {
 ```
 
 ## Tokens
-Tokens disponíveis em `src/tokens` e expostos na lib:
-- colors: primário, secundário, sucesso, destrutivo, background, foreground
-- typography: Inter e escala (12, 14, 16, 20, 24, 32, 48)
+Tokens available in `src/tokens` and exposed in the lib:
+- colors: primary, secondary, success, destructive, background, foreground
+- typography: Inter and scale (12, 14, 16, 20, 24, 32, 48)
 - spacing: 4, 8, 12, 16, 24, 32, 48
 - radii: `lg`
 - shadows: `soft`
 
 ## Button
-- Variantes: `default`, `secondary`, `outline`, `ghost`, `destructive`
-- Tamanhos: `sm`, `md`, `lg`
-- Estados: hover, active, disabled, loading (spinner)
+- Variants: `default`, `secondary`, `outline`, `ghost`, `destructive`
+- Sizes: `sm`, `md`, `lg`
+- States: hover, active, disabled, loading (spinner)
 
-Exemplo:
+Example:
 ```tsx
-<Button variant="secondary" size="lg">Clique</Button>
-<Button isLoading>Salvando...</Button>
+<Button variant="secondary" size="lg">Click</Button>
+<Button isLoading>Saving...</Button>
 ```
 
-## Desenvolvimento
-- Build da lib: `npm run build`
-- Dev da lib: `npm run dev`
+## Development
+- Lib build: `npm run build`
+- Lib dev: `npm run dev`
 - Storybook: `npm run storybook`
 
-## Estrutura
+## Structure
 ```
 src/
   tokens/
@@ -64,16 +64,16 @@ src/
   styles/
 ```
 
-## Publicação
-- Campos principais do package.json:
-  - name: `@slipstream`
+## Publishing
+- Main package.json fields:
+  - name: `slipstream-ds`
   - main: `dist/index.cjs`
   - module: `dist/index.esm.js`
   - types: `dist/index.d.ts`
-- Publicar:
+- Publish:
 ```bash
 npm run build && npm publish --access public
 ```
 
-## Licença
+## License
 MIT
