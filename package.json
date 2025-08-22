@@ -1,6 +1,6 @@
 {
-  "name": "brk-slipstream",
-  "version": "0.2.1",
+  "name": "slipstream-ds",
+  "version": "0.1.0",
   "description": "Slipstream - Design System React + TypeScript",
   "main": "dist/index.cjs",
   "module": "dist/index.esm.js",
