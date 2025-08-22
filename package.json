@@ -1,0 +1,70 @@
+{
+  "name": "@slipstream",
+  "version": "0.1.0",
+  "description": "Slipstream - Design System React + TypeScript",
+  "main": "dist/index.cjs",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "sideEffects": [
+    "dist/styles.css"
+  ],
+  "files": [
+    "dist",
+    "package.json",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup && npm run build:css",
+    "build:css": "tailwindcss -i ./src/styles/tailwind.css -o ./dist/styles.css -m",
+    "dev": "tsup --watch",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "publish:package": "npm run build && npm publish --access public",
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "coverage": "vitest run --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@radix-ui/react-slot": "^1.2.3"
+  },
+  "devDependencies": {
+    "@storybook/addon-a11y": "^8.5.0",
+    "@storybook/addon-docs": "^8.5.0",
+    "@storybook/react-vite": "^8.5.0",
+    "@testing-library/jest-dom": "^6.8.0",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "@vitejs/plugin-react": "^5.0.1",
+    "@vitest/coverage-v8": "^3.2.4",
+    "autoprefixer": "^10.4.21",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "jsdom": "^26.1.0",
+    "postcss": "^8.5.6",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "tailwind-merge": "^3.3.1",
+    "tailwindcss": "^3.4.14",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.2",
+    "vite": "^5.4.10",
+    "vitest": "^3.2.4"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.cjs"
+    },
+    "./styles.css": "./dist/styles.css"
+  }
+}

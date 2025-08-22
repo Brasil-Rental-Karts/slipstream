@@ -1,0 +1,9 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Button > snapshot básico 1`] = `
+<button
+  class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-60 select-none bg-secondary text-white hover:bg-secondary/90 active:bg-secondary/80 h-12 px-6 text-base"
+>
+  Snapshot
+</button>
+`;

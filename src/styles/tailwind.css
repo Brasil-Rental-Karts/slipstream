@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #2563EB;
+  --color-secondary: #6B7280;
+  --color-success: #16A34A;
+  --color-destructive: #DC2626;
+  --color-background: #FFFFFF;
+  --color-foreground: #111827;
+
+  --radius-lg: 0.5rem;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-family: theme('fontFamily.sans');
+  color: var(--color-foreground);
+  background-color: var(--color-background);
+}
+
