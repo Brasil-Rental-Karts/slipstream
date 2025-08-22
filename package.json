@@ -1,5 +1,5 @@
 {
-  "name": "@slipstream",
+  "name": "@wernerjr/slipstream-ui",
   "version": "0.1.0",
   "description": "Slipstream - Design System React + TypeScript",
   "main": "dist/index.cjs",
