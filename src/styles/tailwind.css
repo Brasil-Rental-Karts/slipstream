@@ -4,10 +4,10 @@
 @tailwind utilities;
 
 :root {
-  --color-primary: #2563EB;
-  --color-secondary: #6B7280;
+  --color-primary: #F47820;
+  --color-secondary: #5A5A5A;
   --color-success: #16A34A;
-  --color-destructive: #DC2626;
+  --color-destructive: #EC221F;
   --color-background: #FFFFFF;
   --color-foreground: #111827;
 

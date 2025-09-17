@@ -11,16 +11,16 @@ module.exports = {
       },
       colors: {
         primary: {
-          DEFAULT: "#2563EB",
+          DEFAULT: "#F47820",
         },
         secondary: {
-          DEFAULT: "#6B7280",
+          DEFAULT: "#5A5A5A",
         },
         success: {
           DEFAULT: "#16A34A",
         },
         destructive: {
-          DEFAULT: "#DC2626",
+          DEFAULT: "#EC221F",
         },
         background: {
           DEFAULT: "#FFFFFF",

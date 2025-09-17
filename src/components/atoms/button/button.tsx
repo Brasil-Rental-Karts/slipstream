@@ -8,11 +8,11 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-white shadow-soft hover:bg-primary/90 active:bg-primary/80",
-        secondary: "bg-secondary text-white hover:bg-secondary/90 active:bg-secondary/80",
-        outline: "border border-foreground/20 text-foreground bg-transparent hover:bg-foreground/5 active:bg-foreground/10",
-        ghost: "bg-transparent text-foreground hover:bg-foreground/5 active:bg-foreground/10",
-        destructive: "bg-destructive text-white hover:bg-destructive/90 active:bg-destructive/80",
+        primary: "bg-primary text-black rounded-full shadow-soft hover:bg-primary/90 active:bg-primary/80",
+        secondary: "bg-secondary text-white rounded-full shadow-soft hover:bg-secondary/90 active:bg-secondary/80",
+        outline: "border border-foreground/20 rounded-full text-foreground bg-transparent hover:bg-foreground/5 active:bg-foreground/10",
+        ghost: "bg-transparent text-foreground rounded-full hover:bg-foreground/5 active:bg-foreground/10",
+        destructive: "bg-destructive text-black rounded-full hover:bg-destructive/90 active:bg-destructive/80",
       },
       size: {
         sm: "h-8 px-3 text-sm",
@@ -24,7 +24,7 @@ const buttonVariants = cva(
       },
     },
     defaultVariants: {
-      variant: "default",
+      variant: "primary",
       size: "md",
     },
   }
@@ -35,10 +35,12 @@ export interface ButtonProps
     VariantProps<typeof buttonVariants> {
   asChild?: boolean;
   isLoading?: boolean;
+  leftIcon?: React.ComponentType<{ className?: string }>;
+  rightIcon?: React.ComponentType<{ className?: string }>;
 }
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, isLoading = false, disabled, children, ...props }, ref) => {
+  ({ className, variant, size, asChild = false, isLoading = false, disabled, leftIcon: LeftIcon, rightIcon: RightIcon, children, ...props }, ref) => {
     const Comp = asChild ? Slot : "button";
     const isDisabled = disabled || isLoading;
     return (
@@ -60,7 +62,9 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
             <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
           </svg>
         )}
+        {!isLoading && LeftIcon && <LeftIcon className="h-4 w-4" />}
         {children}
+        {!isLoading && RightIcon && <RightIcon className="h-4 w-4" />}
       </Comp>
     );
   }
