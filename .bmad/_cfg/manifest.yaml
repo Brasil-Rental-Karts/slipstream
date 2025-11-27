@@ -1,0 +1,9 @@
+installation:
+  version: 6.0.0-alpha.12
+  installDate: '2025-11-27T18:16:59.718Z'
+  lastUpdated: '2025-11-27T18:16:59.718Z'
+modules:
+  - core
+  - bmm
+ides:
+  - cursor
